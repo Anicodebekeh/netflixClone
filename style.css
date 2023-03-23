@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.header{
+    height: 90vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), 
+    url(images/462603_4381654_updates.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+.nav .logo img{
+    width: 10%;
+    cursor: pointer;
+}
+
+.nav {
+    padding:3% 8% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    background-color: #b81d24;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 12px;
+    font-weight: 600;
+    border: 0px;
+    border-radius: 5px;
+    white-space: nowrap; 
+    cursor: pointer;
+}
+
+.header .text-content{
+    text-align: center;
+    color: #fff;
+    margin-top: 180px;
+    font-size: 22px;
+}
+
+.header p:nth-of-type(1){
+    margin: 25px 0;
+    font-size: 30px;
+    font-weight: 400;
+
+}
+
+.header p:nth-of-type(2){
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.search-box{
+    text-align: center;
+    margin-top: 40px;
+    width: 40%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+    color: #fff;
+}
+
+.search-box input{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0, 0.5);
+    border: 1px #8f8d8d solid;
+    color: #fff;
+}
+
+.search-box input::placeholder{
+    font-size: 15px;
+}
+
+.search-box span{
+    background-color: #b81d24;
+    padding: 16px 50px;
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    height: 100%;
+    width: 100;
+    white-space: nowrap;
+}
+
+/* first-section */
+
+.first-section,
+.second-section{
+    background:rgb(0,0,0);
+    width: 100%;
+    height: 750px;
+    border-top: 8px solid #232323;
+    border-bottom: 8px solid #232323;
+    color: #fff;
+    display: flex;
+    padding: 0 12%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.first-section-text h2,
+.second-section h2,
+.four-section-text h2 {
+    padding-bottom: 30px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+.first-section-text p, 
+.second-section p,
+.four-section-text p{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.first-section img{
+    width: 500px;
+}
+
+
+/* second section */
+.second-section{
+    border-top:none;
+    border-bottom: 8px solid #232323;
+}
+
+.second-section-img img{
+    width: 400px;
+}
+
+/* .section-three */
+.section-three{
+    background:rgb(0,0,0);
+    width: 100%;
+    height: 400px;
+    border-bottom: 8px solid #232323;
+    color: #fff;
+    padding: 0 12%;
+}
+
+.section-three-text{
+    padding-top: 8%;
+}
+
+.section-three h2 {
+    padding-bottom: 30px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.section-three p{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+/* section-four */
+.section-four{
+    background:rgb(0,0,0);
+    width: 100%;
+    height: 750px;
+    border-bottom: 8px solid #232323;
+    color: #fff;
+    display: flex;
+    padding: 0 12%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.four-section-img img{
+    width: 500px    ;
+}
+
+
+
+/* section-five */
+.faq{
+    padding: 5% 12%;
+    color: #fff;
+    background:rgb(0,0,0);
+    border-bottom: 8px solid #232323;
+}
+
+.faq h2{
+    text-align: center;
+    font-size: 45px;
+    
+}
+
+.accordion{ 
+    margin:  60px auto;
+    width: 100%;
+    min-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #232323;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+.accordion .content{
+    background-color: #232323;
+    text-align: justify;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+/* when you click on the content class it should add the content (p tag) and then the below property should be applied */
+.accordion input[type="radio"]:checked+label+.content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+/* the plus icon should be changed when the content show(when the label is clicked) */
+.accordion input[type="radio"]:checked+label::after{
+    transform: rotate(135deg);
+}
+
+h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    padding: 30px 0 0 0;
+}
+
+.bottom-search-box input{
+    border: #258059 1px solid;
+    background: #1c2432;
+}
+
+
+/* contact section */
+.contact{
+    padding: 5% 12%;
+    background:rgb(0,0,0);
+    height: 500px;
+    width: 100%;
+    color: #fff;
+}
+
+.contact-heading h2{
+    display: inline-block;
+    margin-bottom: 40px;
+    font-weight: 400;
+
+
+}
+
+.contact  a{
+    color: #fff;
+    font-size: 15px;
+}
+
+.contact li{
+    padding: 10px 0;
+    list-style: none;
+}
+
+.contact .contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 300px;
+}
+
+.contact  select{
+    font-size: 14px;
+    padding: 5px  8px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.contact h3{
+    text-align: left;
+    font-weight: 200;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
